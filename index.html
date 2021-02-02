@@ -14,7 +14,6 @@
         <ul class="navigation__list">
           <li class="navigation__item"><a href="#" class="navigation__link">Movies</a></li>
           <li class="navigation__item"><a href="#" class="navigation__link">Schedule</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Contacts</a></li>
         </ul>
       </nav>
     </div>
@@ -27,8 +26,8 @@
           <h1 class="movie__title">Soul</h1>
           <img class="movie__poster" src="assets/soul.jpg" alt="soul_poster"
           srcset="assets/soul_4k.jpg 1920w,
-          assets/soul_1440.jpg 1440w,
-          assets/soul_mobile.jpg 500w">
+          assets/soul_1440.jpg 1440w"
+          >
         </div>
         <div class="movie__column">
           <form action="#" class="schedule">
@@ -97,6 +96,7 @@
                 <span class="schedule__clock">22.00</span>
               </label>
             </div>
+            <button type="submit" class="button">Confirm</button>
           </form>
         </div>
       </article>
@@ -195,7 +195,7 @@
                 <span class="seats__square">11</span>
               </label>
               <label class="seats__item">
-                <input class="seats__input input-hidden" type="checkbox" name="seat" value="12">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="12" checked>
                 <span class="seats__square">12</span>
               </label>
             </div>
@@ -368,9 +368,15 @@
               </label>
             </div>
           </div>
+          <button type="submit" class="seats__button button">Confirm</button>
         </form>
       </section>
     </div>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">By <a class="footer__link" href="https://github.com/HannaSyn/">HannaSyn</a> for Kottans</p>
+    </div>
+  </footer>
 </body>
 </html>
