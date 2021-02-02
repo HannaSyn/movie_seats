@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+html, body {
+  font-family: "Quicksand", sans-serif;
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.header {
+  background-color: #111111;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.logo {
+  flex: 0 0 50%;
+  color: #65b6e9;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+
+.navigation {
+  flex: 1 1 auto;
+}
+.navigation__list {
+  display: flex;
+  justify-content: space-around;
+}
+.navigation__link {
+  color: #c2c2c2;
+  font-size: 18px;
+  transition: 0.2s linear;
+}
+.navigation__link:focus, .navigation__link:hover {
+  color: #ffffff;
+}
+
+.main {
+  background-color: #191919;
+}
+.main__message {
+  line-height: 60px;
+  font-size: 20px;
+  color: #c2c2c2;
+}
+
+.movie {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie__column {
+  flex: 0 0 50%;
+}
+.movie__title {
+  margin: 0 0 30px;
+  padding: 0 0 0 60px;
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #6073ca;
+}
+.movie__title::before {
+  content: "8.1 IMDb";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 48px;
+  height: 48px;
+  border: 3px solid #6073ca;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.schedule {
+  color: #c2c2c2;
+}
+.schedule__title {
+  margin: 0 0 50px;
+  font-size: 24px;
+}
+.schedule__date {
+  display: flex;
+}
+.schedule__item {
+  margin: 0 3vw 0 0;
+  cursor: pointer;
+}
+.schedule__input:checked + .schedule__circle {
+  background-color: #65b6e9;
+}
+.schedule__input:checked + .schedule__clock {
+  color: #65b6e9;
+  text-decoration: underline;
+}
+.schedule__input:focus + .schedule__circle {
+  border: 1px solid #6073ca;
+}
+.schedule__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  color: #191919;
+  transition: 0.3s ease;
+}
+.schedule__time {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75%;
+}
+.schedule__clock {
+  padding: 5px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.input-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
