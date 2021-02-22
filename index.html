@@ -39,65 +39,65 @@
             <h2 class="schedule__title">Choose date and time</h2>
             <div class="schedule__date">
               <label class="schedule__item">Mon
-                <input class="schedule__input input-hidden" type="radio" name="date" value="2021-03-08" checked>
+                <input class="schedule__input input-hidden input-date" type="radio" name="date" value="2021-03-08" checked>
                 <time datetime="2021-03-08" class="schedule__circle">8</time>
               </label>
               <label class="schedule__item">Tue
-                <input class="schedule__input input-hidden" type="radio" name="date" value="2021-03-09">
+                <input class="schedule__input input-hidden input-date" type="radio" name="date" value="2021-03-09">
                 <time datetime="2021-03-09" class="schedule__circle">9</time>
               </label>
               <label class="schedule__item">Wed
-                <input class="schedule__input input-hidden" type="radio" name="date" value="2021-03-10">
+                <input class="schedule__input input-hidden input-date" type="radio" name="date" value="2021-03-10">
                 <time datetime="2021-03-10" class="schedule__circle">10</time>
               </label>
               <label class="schedule__item">Thu
-                <input class="schedule__input input-hidden" type="radio" name="date" value="2021-03-11">
+                <input class="schedule__input input-hidden input-date" type="radio" name="date" value="2021-03-11">
                 <time datetime="2021-03-11" class="schedule__circle">11</time>
               </label>
               <label class="schedule__item">Fri
-                <input class="schedule__input input-hidden" type="radio" name="date" value="2021-03-12">
+                <input class="schedule__input input-hidden input-date" type="radio" name="date" value="2021-03-12">
                 <time datetime="2021-03-12" class="schedule__circle">12</time>
               </label>
             </div>
             <div class="schedule__time">
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="10.00">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="10.00">
                 <time datetime="10.00" class="schedule__clock">10.00</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="12.45" checked>
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="12.45" checked>
                 <time datetime="12.45" class="schedule__clock">12.45</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="15.50">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="15.50">
                 <time datetime="15.50" class="schedule__clock">15.50</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="17.00">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="17.00">
                 <time datetime="17.00" class="schedule__clock">17.00</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="18.00">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="18.00">
                 <time datetime="18.00" class="schedule__clock">18.00</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="18.40">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="18.40">
                 <time datetime="18.40" class="schedule__clock">18.40</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="19.25">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="19.25">
                 <time datetime="19.25" class="schedule__clock">19.25</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="20.30">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="20.30">
                 <time datetime="20.30" class="schedule__clock">20.30</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="21.20">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="21.20">
                 <time datetime="21.20" class="schedule__clock">21.20</time>
               </label>
               <label class="schedule__item">
-                <input class="schedule__input input-hidden" type="radio" name="time" value="22.00">
+                <input class="schedule__input input-hidden input-time" type="radio" name="time" value="22.00">
                 <time datetime="22.00" class="schedule__clock">22.00</time>
               </label>
             </div>
@@ -371,22 +371,7 @@
             </div>
           </div>
 
-          <section class="booked">
-            <div class="booked__container">
-              <h4 class="booked__title">Your booking:</h4>
-              <p class="booked__date">
-                Date: <span class="highlight-text">2021-03-08</span>
-              </p>
-              <p class="booked__time">
-                Time: <span class="highlight-text">12.45</span>
-              </p>
-              <div class="booked__item">
-                <p class="booked__seat-row">Row: <span class="highlight-text">1</span></p>
-                <p class="booked__seat">Seat: <span class="highlight-text">1</span></p>
-                <p class="booked__price">Price: <span class="highlight-text">$10</span></p>
-              </div>
-            </div>
-          </section>
+          <section class="booked"></section>
     
           <button id="booking-button" type="submit" class="seats__button button">Confirm</button>
         </form>
