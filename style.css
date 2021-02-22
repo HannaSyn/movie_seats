@@ -369,6 +369,7 @@ h1, h2, h3, h4, h5, h6 {
 .booked__title {
   font-size: 28px;
   margin: 0 0 10px;
+  color: #65b6e9;
 }
 .booked__container {
   padding: 20px;
@@ -383,10 +384,14 @@ h1, h2, h3, h4, h5, h6 {
 .booked__item {
   margin: 20px auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10px;
   max-width: 50%;
   min-width: 250px;
-  border: 1px solid #747474;
+  border: 1px solid #65b6e9;
   border-radius: 20px;
+}
+.highlight-text {
+  color: #6073ca;
+  font-weight: 700;
 }
