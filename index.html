@@ -370,13 +370,35 @@
               </label>
             </div>
           </div>
-
           <section class="booked"></section>
-    
           <button id="booking-button" type="submit" class="seats__button button">Confirm</button>
         </form>
       </section>
     </div>
+    <section class="checkout">
+      <div class="checkout__container">
+        <h4 class="checkout__title">Your order info:</h4>
+        <p class="checkout__details">Movie: <span class="highlight-text">"Soul"</span></p>
+        <p class="checkout__details">
+          Date: <span class="highlight-text">${chosenDate}</span>
+        </p>
+        <p class="checkout__details">
+          Time: <span class="highlight-text">${chosenTime}</span>
+        </p>
+        <div class="checkout__item">
+          <p>Row: <span class="highlight-text">${rowNum}</span></p>
+          <p>Seat: <span class="highlight-text">${seatNum}</span></p>
+          <p>Price: <span class="highlight-text">${price}</span></p>
+        </div>
+        <div class="checkout__price">
+          Total: <span class="highlight-text">${totalPrice}</span>
+        </div>
+        <div class="checkout__buttons">
+          <button id="back-button" class="checkout__button button">Dismiss</button>
+          <button id="pay-button" class="checkout__button button">Pay</button>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
