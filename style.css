@@ -61,6 +61,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+body.lock{
+  overflow: hidden;
+}
+
 .header {
   background-color: #111111;
 }
@@ -418,6 +422,7 @@ h1, h2, h3, h4, h5, h6 {
 .checkout.show {
   display: block;
 }
+
 .checkout__container {
   max-width: 70vw;
   margin: 8% auto;
@@ -457,6 +462,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding: 0 0 20px;
   margin: 0 0 30px;
+  font-size: 28px;
 }
 .checkout__price::after {
   content: "";

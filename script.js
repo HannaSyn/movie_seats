@@ -1,10 +1,9 @@
+/* eslint-disable no-alert */
 const bookingButton = document.querySelector('#booking-button');
 const hall = document.querySelector('.hall');
-const bookedField = document.querySelector('.booked');
 const checkoutScreen = document.querySelector('#checkout');
 const backButton = document.querySelector('#back-button');
 const payButton = document.querySelector('#pay-button');
-const checkoutContent = document.querySelector('#checkout-content');
 const sceduleContainer = document.querySelector('.schedule');
 const bookedContainer = document.querySelector('.booked__container');
 const dateContainer = document.querySelector('#dateContainer');
@@ -14,6 +13,7 @@ const checkoutTickets = document.querySelector('#checkoutTickets');
 const checkoutDate = document.querySelector('#checkoutDate');
 const checkoutTime = document.querySelector('#checkoutTime');
 const checkoutTotalPrice = document.querySelector('#checkoutTotalPrice');
+const body = document.querySelector('body');
 const price = 10;
 
 const ticketTemplate = `
@@ -33,16 +33,21 @@ function removeTicket(item) {
 
 function uncheckSeats() {
   const checkedSeats = document.querySelectorAll('.seats__input:checked');
-  checkedSeats.forEach(function (seat) { 
+  checkedSeats.forEach((seat) => {
+    // eslint-disable-next-line no-param-reassign
     seat.checked = false;
   });
 }
 
-function clearBookedField({ target }) {
+function clearBookedField() {
+  bookedContainer.classList.remove('show');
+  bookedItemContainer.innerHTML = '';
+  uncheckSeats();
+}
+
+function clickedScedule({ target }) {
   if (target.classList.contains('schedule__input')) {
-    bookedContainer.classList.remove('show');
-    bookedItemContainer.innerHTML = '';
-    uncheckSeats();
+    clearBookedField();
   }
 }
 
@@ -74,11 +79,7 @@ function setBookedField({ target }) {
 
   const currentBookedItem = document.getElementById(`${ticketId}`);
 
-  fillBookedField(
-    chosenTicket,
-    target,
-    currentBookedItem
-  );
+  fillBookedField(chosenTicket, target, currentBookedItem);
 }
 
 function fillCheckout() {
@@ -102,7 +103,7 @@ function fillCheckout() {
       return checkoutTicketTemplate;
     })
     .join('');
-  
+
   checkoutTotalPrice.innerHTML = totalPrice;
   checkoutTickets.innerHTML = chosenTicket;
 }
@@ -114,20 +115,24 @@ function showCheckoutScreen(e) {
     return;
   }
   fillCheckout();
+  body.classList.add('lock');
   checkoutScreen.classList.add('show');
 }
 
-backButton.addEventListener('click', () => {
+function closeCheckoutScreen() {
   checkoutScreen.classList.remove('show');
-});
+  body.classList.remove('lock');
+}
 
 payButton.addEventListener('click', () => {
   alert('Thank you for order!');
   setTimeout(() => {
-    checkoutScreen.classList.remove('show');
+    closeCheckoutScreen();
+    clearBookedField();
   }, 1000);
 });
 
-sceduleContainer.addEventListener('click', clearBookedField);
+backButton.addEventListener('click', closeCheckoutScreen);
+sceduleContainer.addEventListener('click', clickedScedule);
 hall.addEventListener('click', setBookedField);
 bookingButton.addEventListener('click', showCheckoutScreen);
