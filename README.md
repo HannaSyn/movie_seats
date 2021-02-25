@@ -1,6 +1,6 @@
 # Movie Seat Booking
 
-Project was made used only HTML+CSS.
+Project was made for Kottans Front-end course.
 
 It's include:
 - Semantic HTML elements;
